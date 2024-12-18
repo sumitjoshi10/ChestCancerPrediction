@@ -12,12 +12,12 @@
 9. Update the dvc.yaml
 
 ## MLflow
-. ([Documentation]https://mlflow.org/docs/latest/index.html)
+  [Documentation](https://mlflow.org/docs/latest/index.html)
 
-. ([MLflow tutorial](https://www.youtube.com/playlist?list=PLkz_y24mlSJZrqiZ4_cLUiP0CBN5wFmTb))
+  [MLflow tutorial](https://www.youtube.com/playlist?list=PLkz_y24mlSJZrqiZ4_cLUiP0CBN5wFmTb)
 
 cmd
-. mlflow ui
+  mlflow ui
 dagshub
 dagshub
 
@@ -28,11 +28,14 @@ python script.py
 
 Run this to export as env variables:
 
+```bash
 export MLFLOW_TRACKING_URI=https://dagshub.com/entbappy/chest-Disease-Classification-MLflow-DVC.mlflow
 
 export MLFLOW_TRACKING_USERNAME=entbappy 
 
 export MLFLOW_TRACKING_PASSWORD=6824692c47a369aa6f9353c5b10041d5c8edbcef0
+
+```
 DVC cmd
 dvc init
 dvc repro
