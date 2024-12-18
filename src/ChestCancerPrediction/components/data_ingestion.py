@@ -1,4 +1,5 @@
 import os
+import shutil
 import sys
 import zipfile
 import gdown
@@ -37,9 +38,21 @@ class DataIngestion:
         Function returns None
         '''
         try:
+            data_file_name = self.config.data_file_name
             unzip_path = self.config.unzip_dir
             with zipfile.ZipFile(self.config.local_data_file,"r") as zip_ref:
+                file_name = zip_ref.namelist()[0]
                 zip_ref.extractall(unzip_path)
-        
+
+            original_file_path = os.path.join(unzip_path, file_name)
+            new_file_path = os.path.join(unzip_path, data_file_name)
+            
+            if os.path.exists(original_file_path):
+                if os.path.exists(new_file_path):
+                    shutil.rmtree(new_file_path)
+                os.rename(original_file_path, new_file_path)
+                logger.info(f"Renamed the File name from {file_name} to {data_file_name}")
+            else:
+                logger.info("Extracted data is empty")
         except Exception as e:
             raise CustomeException(e,sys)
