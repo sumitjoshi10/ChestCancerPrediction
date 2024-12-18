@@ -12,12 +12,12 @@
 9. Update the dvc.yaml
 
 ## MLflow
-. [Documentation](https://mlflow.org/docs/latest/index.html)
+  [Documentation](https://mlflow.org/docs/latest/index.html)
 
-. [MLflow tutorial](https://www.youtube.com/playlist?list=PLkz_y24mlSJZrqiZ4_cLUiP0CBN5wFmTb))
+  [MLflow tutorial](https://www.youtube.com/playlist?list=PLkz_y24mlSJZrqiZ4_cLUiP0CBN5wFmTb))
 
 cmd
-. mlflow ui
+  mlflow ui
 dagshub
 dagshub
 
